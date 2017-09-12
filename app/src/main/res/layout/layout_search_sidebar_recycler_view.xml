@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/linear_layout_both_match_parent_vertical">
+    <include
+        layout="@layout/common_title"/>
+    <mnilg.com.countrypicker.widget.ClearEditText
+        android:id="@+id/et_search"
+        style="@style/edit_text_primary_lmatch_hwrap"
+        android:layout_height="44dp"
+        android:background="@android:color/white"
+        android:drawableLeft="@mipmap/search_icon"
+        android:drawablePadding="10dp"
+        android:padding="10dp"
+        android:layout_margin="15dp"
+        android:hint="输入国家"
+        android:enabled="false"
+        android:focusable="false"/>
+    <FrameLayout
+        style="@style/both_match_style">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_sidebar_dialog"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/show_head_toast_bg"
+            android:gravity="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+
+        <mnilg.com.countrypicker.widget.SideBar
+            android:id="@+id/view_quick_search_side_bar"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center"/>
+    </FrameLayout>
+</LinearLayout>
